@@ -1,0 +1,67 @@
+:root {
+    --black-key: #264257;
+    --white-key: #fff;
+    --background: #f4f8fb;
+    --highlight: orange;
+  }
+  
+  body {
+    background-color: var(--background);
+  }
+  
+  .piano-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 1rem 0.25rem;
+    margin: 5rem auto;
+    width: 400px;
+    height: 70px;
+  }
+  
+  .white-key:hover,
+  .black-key:hover {
+    background-color: var(--highlight);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .white-key-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .white-key {
+    min-width: 6%;
+    max-width: 6%;
+    height: 100%;
+    margin: 0 0.15rem;
+    background-color: var(--white-key);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .black-key-container {
+    position: absolute;
+    width: 95%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    pointer-events: none;
+  }
+  
+  .key {
+    width: 4%;
+    height: 100%;
+  }
+  
+  .trans-key {
+    z-index: -1;
+    background-color: transparent;
+  }
+  
+  .black-key {
+    background-color: var(--black-key);
+    pointer-events: auto;
+  }
+  
